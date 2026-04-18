@@ -17,7 +17,7 @@
     --blue:#38bdf8;
     --yellow:#f59e0b;
     --gray:#64748b;
-    --header-h: 126px;
+    --header-h: 88px;
   }
 
   *{ box-sizing:border-box; }
@@ -36,7 +36,7 @@
   header{
     position:sticky;
     top:0;
-    z-index:50;
+    z-index:60;
     background:rgba(15,23,42,0.97);
     backdrop-filter: blur(10px);
     border-bottom:1px solid var(--line);
@@ -46,33 +46,79 @@
     padding:12px;
   }
 
+  .header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+  }
+
   .title{
     font-size:22px;
     font-weight:800;
-    margin-bottom:10px;
+    margin:0;
   }
 
-  .top-tabs{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    margin-bottom:10px;
+  .header-actions{
+    display:flex;
+    gap:8px;
   }
 
-  .tab-btn{
+  .icon-btn{
     border:none;
     border-radius:12px;
-    padding:12px;
+    padding:10px 14px;
     font-weight:800;
     cursor:pointer;
     background:var(--panel);
     color:var(--text);
     border:1px solid var(--line);
+    white-space:nowrap;
   }
 
-  .tab-btn.active{
+  .icon-btn.active{
     background:var(--blue);
     border-color:transparent;
+  }
+
+  .slide-panel{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index:50;
+    transform:translateY(calc(-100% - 16px));
+    transition:transform 0.28s ease;
+    padding:0 12px 12px;
+    pointer-events:none;
+  }
+
+  .slide-panel.open{
+    pointer-events:auto;
+  }
+
+  .filter-panel.open{
+    transform:translateY(var(--header-h));
+  }
+
+  .manage-panel.open{
+    transform:translateY(var(--header-h));
+  }
+
+  .panel-card{
+    background:rgba(30,41,59,0.98);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:12px;
+    box-shadow:0 18px 48px rgba(0,0,0,0.4);
+    max-height:calc(100vh - var(--header-h) - 20px);
+    overflow:auto;
+  }
+
+  .panel-title{
+    font-size:18px;
+    font-weight:800;
+    margin-bottom:10px;
   }
 
   .toolbar{
@@ -126,39 +172,6 @@
     font-size:12px;
     margin-top:4px;
     line-height:1.35;
-  }
-
-  .menu-panel{
-    position:fixed;
-    left:0;
-    right:0;
-    top:0;
-    z-index:40;
-    transform:translateY(calc(-100% - 12px));
-    transition:transform 0.28s ease;
-    padding:0 12px 12px;
-    pointer-events:none;
-  }
-
-  .menu-panel.open{
-    transform:translateY(var(--header-h));
-    pointer-events:auto;
-  }
-
-  .menu-card{
-    background:rgba(30,41,59,0.98);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:12px;
-    box-shadow:0 18px 48px rgba(0,0,0,0.4);
-    max-height:calc(100vh - var(--header-h) - 20px);
-    overflow:auto;
-  }
-
-  .menu-title{
-    font-size:18px;
-    font-weight:800;
-    margin-bottom:10px;
   }
 
   .title-edit-list{
@@ -348,7 +361,7 @@
     opacity:0;
     pointer-events:none;
     transition:opacity 0.28s ease;
-    z-index:35;
+    z-index:45;
   }
 
   .backdrop.show{
@@ -369,6 +382,17 @@
   }
 
   @media (max-width: 680px){
+    .header-top{
+      align-items:flex-start;
+      flex-direction:column;
+    }
+
+    .header-actions{
+      width:100%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+    }
+
     .stats{
       grid-template-columns:repeat(2,1fr);
     }
@@ -386,12 +410,21 @@
 <body>
 <header id="pageHeader">
   <div class="header-inner">
-    <div class="title">カード管理</div>
-
-    <div class="top-tabs">
-      <button id="tabCards" class="tab-btn active">カード一覧</button>
-      <button id="tabMenu" class="tab-btn">管理メニュー</button>
+    <div class="header-top">
+      <div class="title">カード管理</div>
+      <div class="header-actions">
+        <button id="filterToggleBtn" class="icon-btn">絞り込み</button>
+        <button id="manageToggleBtn" class="icon-btn">タイトル管理</button>
+      </div>
     </div>
+  </div>
+</header>
+
+<div id="backdrop" class="backdrop"></div>
+
+<div id="filterPanel" class="slide-panel filter-panel">
+  <div class="panel-card">
+    <div class="panel-title">カード管理簿</div>
 
     <div class="toolbar">
       <input id="searchText" type="text" placeholder="カード番号・タイトル名で検索" />
@@ -443,13 +476,11 @@
       </div>
     </div>
   </div>
-</header>
+</div>
 
-<div id="backdrop" class="backdrop"></div>
-
-<div id="menuPanel" class="menu-panel">
-  <div class="menu-card">
-    <div class="menu-title">管理メニュー</div>
+<div id="managePanel" class="slide-panel manage-panel">
+  <div class="panel-card">
+    <div class="panel-title">タイトル管理</div>
     <div id="titleEditList" class="title-edit-list"></div>
     <div class="hint">
       略称 + パック番号ごとにタイトルをまとめています。<br>
@@ -464,19 +495,21 @@
 </main>
 
 <script>
-const STORAGE_OWNED_KEY = "card_manager_owned_counts_v3";
-const STORAGE_TITLE_NAMES_KEY = "card_manager_title_names_v3";
+const STORAGE_OWNED_KEY = "card_manager_owned_counts_v4";
+const STORAGE_TITLE_NAMES_KEY = "card_manager_title_names_v4";
 
 let cards = [];
 let ownedCounts = loadJson(STORAGE_OWNED_KEY, {});
 let customTitleNames = loadJson(STORAGE_TITLE_NAMES_KEY, {});
-let menuOpen = false;
+let filterOpen = false;
+let manageOpen = false;
 
 const els = {
   pageHeader: document.getElementById("pageHeader"),
-  tabCards: document.getElementById("tabCards"),
-  tabMenu: document.getElementById("tabMenu"),
-  menuPanel: document.getElementById("menuPanel"),
+  filterToggleBtn: document.getElementById("filterToggleBtn"),
+  manageToggleBtn: document.getElementById("manageToggleBtn"),
+  filterPanel: document.getElementById("filterPanel"),
+  managePanel: document.getElementById("managePanel"),
   backdrop: document.getElementById("backdrop"),
 
   searchText: document.getElementById("searchText"),
@@ -517,12 +550,46 @@ function updateHeaderHeightVar(){
   document.documentElement.style.setProperty("--header-h", h + "px");
 }
 
-function setMenuOpen(open){
-  menuOpen = open;
-  els.menuPanel.classList.toggle("open", open);
-  els.backdrop.classList.toggle("show", open);
-  els.tabMenu.classList.toggle("active", open);
-  els.tabCards.classList.toggle("active", !open);
+function syncPanels(){
+  els.filterPanel.classList.toggle("open", filterOpen);
+  els.managePanel.classList.toggle("open", manageOpen);
+  els.backdrop.classList.toggle("show", filterOpen || manageOpen);
+  els.filterToggleBtn.classList.toggle("active", filterOpen);
+  els.manageToggleBtn.classList.toggle("active", manageOpen);
+}
+
+function openFilterPanel(){
+  filterOpen = true;
+  manageOpen = false;
+  syncPanels();
+}
+
+function openManagePanel(){
+  manageOpen = true;
+  filterOpen = false;
+  syncPanels();
+}
+
+function closePanels(){
+  filterOpen = false;
+  manageOpen = false;
+  syncPanels();
+}
+
+function toggleFilterPanel(){
+  if (filterOpen) {
+    closePanels();
+  } else {
+    openFilterPanel();
+  }
+}
+
+function toggleManagePanel(){
+  if (manageOpen) {
+    closePanels();
+  } else {
+    openManagePanel();
+  }
 }
 
 function getTitleKey(card){
@@ -661,8 +728,6 @@ function renderTitleFilter(){
     if (!map.has(key)) {
       map.set(key, {
         key,
-        title_code: card.title_code || "",
-        pack_code: card.pack_code || "",
         displayName: getDisplayTitleName(card),
       });
     }
@@ -820,9 +885,9 @@ async function loadCards(){
   renderAll();
 }
 
-els.tabCards.addEventListener("click", () => setMenuOpen(false));
-els.tabMenu.addEventListener("click", () => setMenuOpen(!menuOpen));
-els.backdrop.addEventListener("click", () => setMenuOpen(false));
+els.filterToggleBtn.addEventListener("click", toggleFilterPanel);
+els.manageToggleBtn.addEventListener("click", toggleManagePanel);
+els.backdrop.addEventListener("click", closePanels);
 
 els.searchText.addEventListener("input", renderCards);
 els.titleFilter.addEventListener("change", renderCards);
