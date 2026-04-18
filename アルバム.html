@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>カード管理</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --panel:#1e293b;
+    --panel2:#0b1220;
+    --line:#334155;
+    --text:#f8fafc;
+    --sub:#cbd5e1;
+    --green:#22c55e;
+    --red:#ef4444;
+    --blue:#38bdf8;
+    --yellow:#f59e0b;
+    --gray:#64748b;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
+  }
+
+  header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:rgba(15,23,42,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:12px;
+  }
+
+  .title{
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:10px;
+  }
+
+  .toolbar{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .row3{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+  }
+
+  input, select, button{
+    font:inherit;
+  }
+
+  input, select{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:var(--panel2);
+    color:var(--text);
+    outline:none;
+  }
+
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:10px;
+  }
+
+  .stat{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+  }
+
+  .stat .num{
+    font-size:18px;
+    font-weight:800;
+  }
+
+  .stat .label{
+    color:var(--sub);
+    font-size:12px;
+    margin-top:4px;
+  }
+
+  main{
+    padding:12px;
+  }
+
+  .section{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:12px;
+    margin-bottom:12px;
+  }
+
+  .section-title{
+    font-size:18px;
+    font-weight:800;
+    margin-bottom:10px;
+  }
+
+  .title-edit-list{
+    display:grid;
+    gap:8px;
+  }
+
+  .title-edit-item{
+    display:grid;
+    grid-template-columns:1fr 1.2fr auto;
+    gap:8px;
+    align-items:center;
+    background:var(--panel2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:8px;
+  }
+
+  .code-label{
+    font-size:13px;
+    color:var(--sub);
+    word-break:break-word;
+  }
+
+  .mini-btn{
+    padding:10px 12px;
+    border:none;
+    border-radius:10px;
+    background:var(--blue);
+    color:white;
+    cursor:pointer;
+    font-weight:700;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+    gap:10px;
+  }
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:8px;
+    display:flex;
+    flex-direction:column;
+    min-height:100%;
+  }
+
+  .img-wrap{
+    width:100%;
+    aspect-ratio: 0.72 / 1;
+    background:#111827;
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid var(--line);
+  }
+
+  .card img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    background:#111827;
+  }
+
+  .title-name{
+    font-size:12px;
+    color:var(--blue);
+    margin-top:8px;
+    font-weight:700;
+    min-height:2.8em;
+    line-height:1.4;
+  }
+
+  .number{
+    font-size:12px;
+    color:var(--sub);
+    margin-top:4px;
+    word-break:break-word;
+  }
+
+  .badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:8px;
+  }
+
+  .badge{
+    font-size:11px;
+    padding:4px 8px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--panel2);
+    color:var(--sub);
+  }
+
+  .badge-owned{
+    background:rgba(34,197,94,0.15);
+    color:#bbf7d0;
+    border-color:rgba(34,197,94,0.45);
+  }
+
+  .badge-not-owned{
+    background:rgba(239,68,68,0.15);
+    color:#fecaca;
+    border-color:rgba(239,68,68,0.45);
+  }
+
+  .controls{
+    margin-top:10px;
+    display:grid;
+    gap:8px;
+  }
+
+  .toggle-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+    font-weight:800;
+  }
+
+  .owned{
+    background:var(--green);
+  }
+
+  .not-owned{
+    background:var(--red);
+  }
+
+  .count-row{
+    display:grid;
+    grid-template-columns:42px 1fr 42px;
+    gap:8px;
+    align-items:center;
+  }
+
+  .count-btn{
+    height:42px;
+    border:none;
+    border-radius:10px;
+    background:var(--gray);
+    color:white;
+    font-size:20px;
+    font-weight:800;
+    cursor:pointer;
+  }
+
+  .count-display{
+    background:var(--panel2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    min-height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    font-weight:800;
+  }
+
+  .empty{
+    text-align:center;
+    color:var(--sub);
+    padding:24px 0;
+  }
+
+  .hint{
+    color:var(--sub);
+    font-size:12px;
+    margin-top:8px;
+    line-height:1.6;
+  }
+
+  @media (max-width: 900px){
+    .stats{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+
+  @media (max-width: 680px){
+    .row, .row3{
+      grid-template-columns:1fr;
+    }
+
+    .title-edit-item{
+      grid-template-columns:1fr;
+    }
+
+    .grid{
+      grid-template-columns:repeat(auto-fill, minmax(135px, 1fr));
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="title">カード管理</div>
+
+  <div class="toolbar">
+    <input id="searchText" type="text" placeholder="カード番号・タイトル名で検索" />
+
+    <div class="row3">
+      <select id="titleFilter">
+        <option value="">全タイトル</option>
+      </select>
+
+      <select id="ownedFilter">
+        <option value="">所持状況すべて</option>
+        <option value="owned">所持のみ</option>
+        <option value="not-owned">未所持のみ</option>
+      </select>
+
+      <select id="sortMode">
+        <option value="number">番号順</option>
+        <option value="title">タイトル順</option>
+        <option value="count-desc">所持枚数が多い順</option>
+        <option value="owned-first">所持優先</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="num" id="statVisible">0</div>
+      <div class="label">表示件数</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="statAll">0</div>
+      <div class="label">全カード数</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="statOwnedKinds">0</div>
+      <div class="label">所持種類数</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="statOwnedCount">0</div>
+      <div class="label">所持枚数合計</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="section">
+    <div class="section-title">タイトル名の管理</div>
+    <div id="titleEditList" class="title-edit-list"></div>
+    <div class="hint">
+      略称 + パック番号ごとにタイトルをまとめています。<br>
+      ここで設定した表示名は、このブラウザに保存されます。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">カード一覧</div>
+    <div id="cardGrid" class="grid"></div>
+    <div id="emptyState" class="empty" style="display:none;">条件に合うカードがありません。</div>
+  </div>
+</main>
+
+<script>
+const STORAGE_OWNED_KEY = "card_manager_owned_counts_v2";
+const STORAGE_TITLE_NAMES_KEY = "card_manager_title_names_v2";
+
+let cards = [];
+let ownedCounts = loadJson(STORAGE_OWNED_KEY, {});
+let customTitleNames = loadJson(STORAGE_TITLE_NAMES_KEY, {});
+
+const els = {
+  searchText: document.getElementById("searchText"),
+  titleFilter: document.getElementById("titleFilter"),
+  ownedFilter: document.getElementById("ownedFilter"),
+  sortMode: document.getElementById("sortMode"),
+  titleEditList: document.getElementById("titleEditList"),
+  cardGrid: document.getElementById("cardGrid"),
+  emptyState: document.getElementById("emptyState"),
+  statVisible: document.getElementById("statVisible"),
+  statAll: document.getElementById("statAll"),
+  statOwnedKinds: document.getElementById("statOwnedKinds"),
+  statOwnedCount: document.getElementById("statOwnedCount"),
+};
+
+function loadJson(key, fallback){
+  try{
+    return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
+  }catch(e){
+    return fallback;
+  }
+}
+
+function saveOwnedCounts(){
+  localStorage.setItem(STORAGE_OWNED_KEY, JSON.stringify(ownedCounts));
+}
+
+function saveTitleNames(){
+  localStorage.setItem(STORAGE_TITLE_NAMES_KEY, JSON.stringify(customTitleNames));
+}
+
+function getTitleKey(card){
+  return `${card.title_code || ""}__${card.pack_code || ""}`;
+}
+
+function getDefaultTitleName(card){
+  const t = card.title_code || "";
+  const p = card.pack_code || "";
+  return `${t} / ${p}`;
+}
+
+function getDisplayTitleName(card){
+  const key = getTitleKey(card);
+  return customTitleNames[key] && customTitleNames[key].trim()
+    ? customTitleNames[key].trim()
+    : getDefaultTitleName(card);
+}
+
+function getOwnedCount(cardId){
+  return Number(ownedCounts[cardId] || 0);
+}
+
+function isOwned(cardId){
+  return getOwnedCount(cardId) > 0;
+}
+
+function updateCount(cardId, delta){
+  const next = Math.max(0, getOwnedCount(cardId) + delta);
+  ownedCounts[cardId] = next;
+  saveOwnedCounts();
+  renderAll();
+}
+
+function toggleOwned(cardId){
+  const current = getOwnedCount(cardId);
+  ownedCounts[cardId] = current > 0 ? 0 : 1;
+  saveOwnedCounts();
+  renderAll();
+}
+
+function sortCards(list){
+  const mode = els.sortMode.value;
+
+  list.sort((a, b) => {
+    if (mode === "title"){
+      return compareText(getDisplayTitleName(a), getDisplayTitleName(b))
+        || compareText(a.number || "", b.number || "");
+    }
+
+    if (mode === "count-desc"){
+      return getOwnedCount(b.id) - getOwnedCount(a.id)
+        || compareText(a.number || "", b.number || "");
+    }
+
+    if (mode === "owned-first"){
+      return Number(isOwned(b.id)) - Number(isOwned(a.id))
+        || getOwnedCount(b.id) - getOwnedCount(a.id)
+        || compareText(a.number || "", b.number || "");
+    }
+
+    return compareCardNumber(a, b);
+  });
+
+  return list;
+}
+
+function compareText(a, b){
+  return String(a).localeCompare(String(b), "ja");
+}
+
+function compareCardNumber(a, b){
+  const ta = a.title_code || "";
+  const tb = b.title_code || "";
+  const pa = a.pack_code || "";
+  const pb = b.pack_code || "";
+  const na = parseInt(a.card_no_numeric || "0", 10);
+  const nb = parseInt(b.card_no_numeric || "0", 10);
+  const va = a.variant || "";
+  const vb = b.variant || "";
+
+  return compareText(ta, tb)
+    || compareText(pa, pb)
+    || (na - nb)
+    || compareText(va, vb)
+    || compareText(a.number || "", b.number || "");
+}
+
+function getFilteredCards(){
+  const q = els.searchText.value.trim().toLowerCase();
+  const titleFilter = els.titleFilter.value;
+  const ownedFilter = els.ownedFilter.value;
+
+  const filtered = cards.filter(card => {
+    const titleName = getDisplayTitleName(card).toLowerCase();
+    const number = String(card.number || "").toLowerCase();
+    const titleKey = getTitleKey(card);
+
+    const matchesText = !q || number.includes(q) || titleName.includes(q);
+    const matchesTitle = !titleFilter || titleKey === titleFilter;
+    const count = getOwnedCount(card.id);
+
+    let matchesOwned = true;
+    if (ownedFilter === "owned") matchesOwned = count > 0;
+    if (ownedFilter === "not-owned") matchesOwned = count === 0;
+
+    return matchesText && matchesTitle && matchesOwned;
+  });
+
+  return sortCards(filtered);
+}
+
+function renderStats(filteredCards){
+  const allCount = cards.length;
+  const ownedKinds = cards.filter(card => getOwnedCount(card.id) > 0).length;
+  const ownedTotal = cards.reduce((sum, card) => sum + getOwnedCount(card.id), 0);
+
+  els.statVisible.textContent = filteredCards.length;
+  els.statAll.textContent = allCount;
+  els.statOwnedKinds.textContent = ownedKinds;
+  els.statOwnedCount.textContent = ownedTotal;
+}
+
+function renderTitleFilter(){
+  const map = new Map();
+
+  cards.forEach(card => {
+    const key = getTitleKey(card);
+    if (!map.has(key)) {
+      map.set(key, {
+        key,
+        title_code: card.title_code || "",
+        pack_code: card.pack_code || "",
+        displayName: getDisplayTitleName(card),
+      });
+    }
+  });
+
+  const current = els.titleFilter.value;
+  const items = [...map.values()].sort((a, b) => compareText(a.displayName, b.displayName));
+
+  els.titleFilter.innerHTML = `<option value="">全タイトル</option>`;
+  items.forEach(item => {
+    const opt = document.createElement("option");
+    opt.value = item.key;
+    opt.textContent = item.displayName;
+    els.titleFilter.appendChild(opt);
+  });
+
+  const valid = items.some(item => item.key === current);
+  els.titleFilter.value = valid ? current : "";
+}
+
+function renderTitleEditor(){
+  const map = new Map();
+
+  cards.forEach(card => {
+    const key = getTitleKey(card);
+    if (!map.has(key)) {
+      map.set(key, {
+        key,
+        rawLabel: `${card.title_code || ""} / ${card.pack_code || ""}`,
+        displayName: getDisplayTitleName(card),
+      });
+    }
+  });
+
+  const items = [...map.values()].sort((a, b) => compareText(a.displayName, b.displayName));
+  els.titleEditList.innerHTML = "";
+
+  items.forEach(item => {
+    const wrap = document.createElement("div");
+    wrap.className = "title-edit-item";
+
+    const raw = document.createElement("div");
+    raw.className = "code-label";
+    raw.textContent = item.rawLabel;
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = customTitleNames[item.key] || "";
+    input.placeholder = `表示名（未設定なら ${item.rawLabel} ）`;
+
+    const btn = document.createElement("button");
+    btn.className = "mini-btn";
+    btn.textContent = "保存";
+
+    btn.onclick = () => {
+      const value = input.value.trim();
+      if (value) {
+        customTitleNames[item.key] = value;
+      } else {
+        delete customTitleNames[item.key];
+      }
+      saveTitleNames();
+      renderAll();
+    };
+
+    wrap.appendChild(raw);
+    wrap.appendChild(input);
+    wrap.appendChild(btn);
+    els.titleEditList.appendChild(wrap);
+  });
+}
+
+function renderCards(){
+  const filtered = getFilteredCards();
+  renderStats(filtered);
+
+  els.cardGrid.innerHTML = "";
+
+  if (filtered.length === 0){
+    els.emptyState.style.display = "block";
+    return;
+  }
+  els.emptyState.style.display = "none";
+
+  filtered.forEach(card => {
+    const count = getOwnedCount(card.id);
+    const owned = count > 0;
+
+    const div = document.createElement("div");
+    div.className = "card";
+
+    div.innerHTML = `
+      <div class="img-wrap">
+        <img src="${escapeHtml(card.image_file)}" alt="${escapeHtml(card.number || "")}" loading="lazy">
+      </div>
+
+      <div class="title-name">${escapeHtml(getDisplayTitleName(card))}</div>
+      <div class="number">${escapeHtml(card.number || "")}</div>
+
+      <div class="badges">
+        <span class="badge ${owned ? 'badge-owned' : 'badge-not-owned'}">
+          ${owned ? '所持' : '未所持'}
+        </span>
+        <span class="badge">枚数 ${count}</span>
+        ${(card.variant || "") ? `<span class="badge">差分 ${escapeHtml(card.variant)}</span>` : ""}
+      </div>
+
+      <div class="controls">
+        <button class="toggle-btn ${owned ? 'owned' : 'not-owned'}">
+          ${owned ? '所持中' : '未所持'}
+        </button>
+
+        <div class="count-row">
+          <button class="count-btn minus-btn">-</button>
+          <div class="count-display">${count}</div>
+          <button class="count-btn plus-btn">+</button>
+        </div>
+      </div>
+    `;
+
+    const toggleBtn = div.querySelector(".toggle-btn");
+    const minusBtn = div.querySelector(".minus-btn");
+    const plusBtn = div.querySelector(".plus-btn");
+
+    toggleBtn.onclick = () => toggleOwned(card.id);
+    minusBtn.onclick = () => updateCount(card.id, -1);
+    plusBtn.onclick = () => updateCount(card.id, 1);
+
+    els.cardGrid.appendChild(div);
+  });
+}
+
+function escapeHtml(str){
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function renderAll(){
+  renderTitleFilter();
+  renderTitleEditor();
+  renderCards();
+}
+
+async function loadCards(){
+  const res = await fetch("cards.json");
+  if (!res.ok){
+    throw new Error("cards.json の読み込みに失敗しました");
+  }
+  cards = await res.json();
+  renderAll();
+}
+
+els.searchText.addEventListener("input", renderCards);
+els.titleFilter.addEventListener("change", renderCards);
+els.ownedFilter.addEventListener("change", renderCards);
+els.sortMode.addEventListener("change", renderCards);
+
+loadCards().catch(err => {
+  els.cardGrid.innerHTML = "";
+  els.emptyState.style.display = "block";
+  els.emptyState.textContent = "cards.json の読み込みに失敗しました。";
+  console.error(err);
+});
+</script>
+</body>
+</html>
