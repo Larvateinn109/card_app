@@ -15,6 +15,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_001sp",
+    "name": "bav/w112-001sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-001sp",
+    "base_number": "bav/w112-001",
+    "card_no_numeric": "001",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_001sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_002",
     "name": "bav/w112-002",
     "title_code": "bav",
@@ -27,6 +42,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_002.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_002sp",
+    "name": "bav/w112-002sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-002sp",
+    "base_number": "bav/w112-002",
+    "card_no_numeric": "002",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_002sp.png",
     "memo": ""
   },
   {
@@ -45,6 +75,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_003sp",
+    "name": "bav/w112-003sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-003sp",
+    "base_number": "bav/w112-003",
+    "card_no_numeric": "003",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_003sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_004",
     "name": "bav/w112-004",
     "title_code": "bav",
@@ -57,6 +102,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_004.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_004sp",
+    "name": "bav/w112-004sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-004sp",
+    "base_number": "bav/w112-004",
+    "card_no_numeric": "004",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_004sp.png",
     "memo": ""
   },
   {
@@ -75,6 +135,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_005sp",
+    "name": "bav/w112-005sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-005sp",
+    "base_number": "bav/w112-005",
+    "card_no_numeric": "005",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_005sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_006",
     "name": "bav/w112-006",
     "title_code": "bav",
@@ -87,6 +162,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_006.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_006sp",
+    "name": "bav/w112-006sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-006sp",
+    "base_number": "bav/w112-006",
+    "card_no_numeric": "006",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_006sp.png",
     "memo": ""
   },
   {
@@ -105,6 +195,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_007sp",
+    "name": "bav/w112-007sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-007sp",
+    "base_number": "bav/w112-007",
+    "card_no_numeric": "007",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_007sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_008",
     "name": "bav/w112-008",
     "title_code": "bav",
@@ -117,6 +222,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_008.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_008sp",
+    "name": "bav/w112-008sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-008sp",
+    "base_number": "bav/w112-008",
+    "card_no_numeric": "008",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_008sp.png",
     "memo": ""
   },
   {
@@ -135,6 +255,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_009sp",
+    "name": "bav/w112-009sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-009sp",
+    "base_number": "bav/w112-009",
+    "card_no_numeric": "009",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_009sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_010",
     "name": "bav/w112-010",
     "title_code": "bav",
@@ -150,6 +285,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_010sp",
+    "name": "bav/w112-010sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-010sp",
+    "base_number": "bav/w112-010",
+    "card_no_numeric": "010",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_010sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_011",
     "name": "bav/w112-011",
     "title_code": "bav",
@@ -162,6 +312,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_011.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_011sp",
+    "name": "bav/w112-011sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-011sp",
+    "base_number": "bav/w112-011",
+    "card_no_numeric": "011",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_011sp.png",
     "memo": ""
   },
   {
@@ -960,6 +1125,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_038sp",
+    "name": "bav/w112-038sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-038sp",
+    "base_number": "bav/w112-038",
+    "card_no_numeric": "038",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_038sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_039",
     "name": "bav/w112-039",
     "title_code": "bav",
@@ -972,6 +1152,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_039.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_039sp",
+    "name": "bav/w112-039sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-039sp",
+    "base_number": "bav/w112-039",
+    "card_no_numeric": "039",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_039sp.png",
     "memo": ""
   },
   {
@@ -990,6 +1185,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_040sp",
+    "name": "bav/w112-040sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-040sp",
+    "base_number": "bav/w112-040",
+    "card_no_numeric": "040",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_040sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_041",
     "name": "bav/w112-041",
     "title_code": "bav",
@@ -1002,6 +1212,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_041.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_041sp",
+    "name": "bav/w112-041sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-041sp",
+    "base_number": "bav/w112-041",
+    "card_no_numeric": "041",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_041sp.png",
     "memo": ""
   },
   {
@@ -1020,6 +1245,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_042sp",
+    "name": "bav/w112-042sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-042sp",
+    "base_number": "bav/w112-042",
+    "card_no_numeric": "042",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_042sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_043",
     "name": "bav/w112-043",
     "title_code": "bav",
@@ -1032,6 +1272,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_043.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_043sp",
+    "name": "bav/w112-043sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-043sp",
+    "base_number": "bav/w112-043",
+    "card_no_numeric": "043",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_043sp.png",
     "memo": ""
   },
   {
@@ -1050,6 +1305,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_044sp",
+    "name": "bav/w112-044sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-044sp",
+    "base_number": "bav/w112-044",
+    "card_no_numeric": "044",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_044sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_045",
     "name": "bav/w112-045",
     "title_code": "bav",
@@ -1062,6 +1332,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_045.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_045sp",
+    "name": "bav/w112-045sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-045sp",
+    "base_number": "bav/w112-045",
+    "card_no_numeric": "045",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_045sp.png",
     "memo": ""
   },
   {
@@ -1080,6 +1365,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_046sp",
+    "name": "bav/w112-046sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-046sp",
+    "base_number": "bav/w112-046",
+    "card_no_numeric": "046",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_046sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_047",
     "name": "bav/w112-047",
     "title_code": "bav",
@@ -1095,6 +1395,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_047sp",
+    "name": "bav/w112-047sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-047sp",
+    "base_number": "bav/w112-047",
+    "card_no_numeric": "047",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_047sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_048",
     "name": "bav/w112-048",
     "title_code": "bav",
@@ -1107,6 +1422,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_048.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_048sp",
+    "name": "bav/w112-048sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-048sp",
+    "base_number": "bav/w112-048",
+    "card_no_numeric": "048",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_048sp.png",
     "memo": ""
   },
   {
@@ -1965,6 +2295,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_077sp",
+    "name": "bav/w112-077sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-077sp",
+    "base_number": "bav/w112-077",
+    "card_no_numeric": "077",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_077sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_078",
     "name": "bav/w112-078",
     "title_code": "bav",
@@ -1977,6 +2322,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_078.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_078sp",
+    "name": "bav/w112-078sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-078sp",
+    "base_number": "bav/w112-078",
+    "card_no_numeric": "078",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_078sp.png",
     "memo": ""
   },
   {
@@ -1995,6 +2355,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_079sp",
+    "name": "bav/w112-079sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-079sp",
+    "base_number": "bav/w112-079",
+    "card_no_numeric": "079",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_079sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_080",
     "name": "bav/w112-080",
     "title_code": "bav",
@@ -2007,6 +2382,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_080.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_080sp",
+    "name": "bav/w112-080sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-080sp",
+    "base_number": "bav/w112-080",
+    "card_no_numeric": "080",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_080sp.png",
     "memo": ""
   },
   {
@@ -2025,6 +2415,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_081sp",
+    "name": "bav/w112-081sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-081sp",
+    "base_number": "bav/w112-081",
+    "card_no_numeric": "081",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_081sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_082",
     "name": "bav/w112-082",
     "title_code": "bav",
@@ -2037,6 +2442,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_082.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_082sp",
+    "name": "bav/w112-082sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-082sp",
+    "base_number": "bav/w112-082",
+    "card_no_numeric": "082",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_082sp.png",
     "memo": ""
   },
   {
@@ -2055,6 +2475,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_083sp",
+    "name": "bav/w112-083sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-083sp",
+    "base_number": "bav/w112-083",
+    "card_no_numeric": "083",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_083sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_084",
     "name": "bav/w112-084",
     "title_code": "bav",
@@ -2067,6 +2502,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_084.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_084sp",
+    "name": "bav/w112-084sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-084sp",
+    "base_number": "bav/w112-084",
+    "card_no_numeric": "084",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_084sp.png",
     "memo": ""
   },
   {
@@ -2085,6 +2535,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_085sp",
+    "name": "bav/w112-085sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-085sp",
+    "base_number": "bav/w112-085",
+    "card_no_numeric": "085",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_085sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_086",
     "name": "bav/w112-086",
     "title_code": "bav",
@@ -2097,6 +2562,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_086.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_086sp",
+    "name": "bav/w112-086sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-086sp",
+    "base_number": "bav/w112-086",
+    "card_no_numeric": "086",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_086sp.png",
     "memo": ""
   },
   {
@@ -2115,6 +2595,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_087sp",
+    "name": "bav/w112-087sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-087sp",
+    "base_number": "bav/w112-087",
+    "card_no_numeric": "087",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_087sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_088",
     "name": "bav/w112-088",
     "title_code": "bav",
@@ -2127,6 +2622,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_088.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_088sp",
+    "name": "bav/w112-088sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-088sp",
+    "base_number": "bav/w112-088",
+    "card_no_numeric": "088",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_088sp.png",
     "memo": ""
   },
   {
@@ -2685,6 +3195,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_107sp",
+    "name": "bav/w112-107sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-107sp",
+    "base_number": "bav/w112-107",
+    "card_no_numeric": "107",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_107sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_108",
     "name": "bav/w112-108",
     "title_code": "bav",
@@ -2697,6 +3222,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_108.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_108sp",
+    "name": "bav/w112-108sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-108sp",
+    "base_number": "bav/w112-108",
+    "card_no_numeric": "108",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_108sp.png",
     "memo": ""
   },
   {
@@ -2715,6 +3255,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_109sp",
+    "name": "bav/w112-109sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-109sp",
+    "base_number": "bav/w112-109",
+    "card_no_numeric": "109",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_109sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_110",
     "name": "bav/w112-110",
     "title_code": "bav",
@@ -2727,6 +3282,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_110.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_110sp",
+    "name": "bav/w112-110sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-110sp",
+    "base_number": "bav/w112-110",
+    "card_no_numeric": "110",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_110sp.png",
     "memo": ""
   },
   {
@@ -2745,6 +3315,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_111sp",
+    "name": "bav/w112-111sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-111sp",
+    "base_number": "bav/w112-111",
+    "card_no_numeric": "111",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_111sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_112",
     "name": "bav/w112-112",
     "title_code": "bav",
@@ -2757,6 +3342,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_112.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_112sp",
+    "name": "bav/w112-112sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-112sp",
+    "base_number": "bav/w112-112",
+    "card_no_numeric": "112",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_112sp.png",
     "memo": ""
   },
   {
@@ -2775,6 +3375,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_113sp",
+    "name": "bav/w112-113sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-113sp",
+    "base_number": "bav/w112-113",
+    "card_no_numeric": "113",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_113sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_114",
     "name": "bav/w112-114",
     "title_code": "bav",
@@ -2787,6 +3402,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_114.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_114sp",
+    "name": "bav/w112-114sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-114sp",
+    "base_number": "bav/w112-114",
+    "card_no_numeric": "114",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_114sp.png",
     "memo": ""
   },
   {
@@ -2805,6 +3435,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_115sp",
+    "name": "bav/w112-115sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-115sp",
+    "base_number": "bav/w112-115",
+    "card_no_numeric": "115",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_115sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_116",
     "name": "bav/w112-116",
     "title_code": "bav",
@@ -2820,6 +3465,21 @@
     "memo": ""
   },
   {
+    "id": "bav_w112_116sp",
+    "name": "bav/w112-116sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-116sp",
+    "base_number": "bav/w112-116",
+    "card_no_numeric": "116",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_116sp.png",
+    "memo": ""
+  },
+  {
     "id": "bav_w112_117",
     "name": "bav/w112-117",
     "title_code": "bav",
@@ -2832,6 +3492,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_117.png",
+    "memo": ""
+  },
+  {
+    "id": "bav_w112_117sp",
+    "name": "bav/w112-117sp",
+    "title_code": "bav",
+    "pack_code": "w112",
+    "number": "bav/w112-117sp",
+    "base_number": "bav/w112-117",
+    "card_no_numeric": "117",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/bav_w112_117sp.png",
     "memo": ""
   },
   {
@@ -3615,6 +4290,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_001sp",
+    "name": "smp/w137-001sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-001sp",
+    "base_number": "smp/w137-001",
+    "card_no_numeric": "001",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_001sp.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_002",
     "name": "smp/w137-002",
     "title_code": "smp",
@@ -3975,6 +4665,66 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_012sa",
+    "name": "smp/w137-012sa",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-012sa",
+    "base_number": "smp/w137-012",
+    "card_no_numeric": "012",
+    "variant": "sa",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_012sa.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_012sb",
+    "name": "smp/w137-012sb",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-012sb",
+    "base_number": "smp/w137-012",
+    "card_no_numeric": "012",
+    "variant": "sb",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_012sb.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_012sc",
+    "name": "smp/w137-012sc",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-012sc",
+    "base_number": "smp/w137-012",
+    "card_no_numeric": "012",
+    "variant": "sc",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_012sc.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_012sd",
+    "name": "smp/w137-012sd",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-012sd",
+    "base_number": "smp/w137-012",
+    "card_no_numeric": "012",
+    "variant": "sd",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_012sd.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_013",
     "name": "smp/w137-013",
     "title_code": "smp",
@@ -4065,6 +4815,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_015ssp",
+    "name": "smp/w137-015ssp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-015ssp",
+    "base_number": "smp/w137-015",
+    "card_no_numeric": "015",
+    "variant": "ssp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_015ssp.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_016",
     "name": "smp/w137-016",
     "title_code": "smp",
@@ -4092,6 +4857,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_016s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_016sp",
+    "name": "smp/w137-016sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-016sp",
+    "base_number": "smp/w137-016",
+    "card_no_numeric": "016",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_016sp.png",
     "memo": ""
   },
   {
@@ -4152,6 +4932,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_018s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_018sp",
+    "name": "smp/w137-018sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-018sp",
+    "base_number": "smp/w137-018",
+    "card_no_numeric": "018",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_018sp.png",
     "memo": ""
   },
   {
@@ -4695,6 +5490,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_036sp",
+    "name": "smp/w137-036sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-036sp",
+    "base_number": "smp/w137-036",
+    "card_no_numeric": "036",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_036sp.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_037",
     "name": "smp/w137-037",
     "title_code": "smp",
@@ -4722,6 +5532,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_037s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_037ssp",
+    "name": "smp/w137-037ssp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-037ssp",
+    "base_number": "smp/w137-037",
+    "card_no_numeric": "037",
+    "variant": "ssp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_037ssp.png",
     "memo": ""
   },
   {
@@ -4755,6 +5580,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_038ssp",
+    "name": "smp/w137-038ssp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-038ssp",
+    "base_number": "smp/w137-038",
+    "card_no_numeric": "038",
+    "variant": "ssp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_038ssp.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_039",
     "name": "smp/w137-039",
     "title_code": "smp",
@@ -4785,6 +5625,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_039sp",
+    "name": "smp/w137-039sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-039sp",
+    "base_number": "smp/w137-039",
+    "card_no_numeric": "039",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_039sp.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_040",
     "name": "smp/w137-040",
     "title_code": "smp",
@@ -4812,6 +5667,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_040s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_040sp",
+    "name": "smp/w137-040sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-040sp",
+    "base_number": "smp/w137-040",
+    "card_no_numeric": "040",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_040sp.png",
     "memo": ""
   },
   {
@@ -4962,6 +5832,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_045s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_045sp",
+    "name": "smp/w137-045sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-045sp",
+    "base_number": "smp/w137-045",
+    "card_no_numeric": "045",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_045sp.png",
     "memo": ""
   },
   {
@@ -5685,6 +6570,66 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_068sa",
+    "name": "smp/w137-068sa",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-068sa",
+    "base_number": "smp/w137-068",
+    "card_no_numeric": "068",
+    "variant": "sa",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_068sa.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_068sb",
+    "name": "smp/w137-068sb",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-068sb",
+    "base_number": "smp/w137-068",
+    "card_no_numeric": "068",
+    "variant": "sb",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_068sb.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_068sc",
+    "name": "smp/w137-068sc",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-068sc",
+    "base_number": "smp/w137-068",
+    "card_no_numeric": "068",
+    "variant": "sc",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_068sc.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_068sd",
+    "name": "smp/w137-068sd",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-068sd",
+    "base_number": "smp/w137-068",
+    "card_no_numeric": "068",
+    "variant": "sd",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_068sd.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_069",
     "name": "smp/w137-069",
     "title_code": "smp",
@@ -5730,6 +6675,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_070agr",
+    "name": "smp/w137-070agr",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-070agr",
+    "base_number": "smp/w137-070",
+    "card_no_numeric": "070",
+    "variant": "agr",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_070agr.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_070b",
     "name": "smp/w137-070b",
     "title_code": "smp",
@@ -5772,6 +6732,66 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_070d.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_070ra",
+    "name": "smp/w137-070ra",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-070ra",
+    "base_number": "smp/w137-070",
+    "card_no_numeric": "070",
+    "variant": "ra",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_070ra.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_070rb",
+    "name": "smp/w137-070rb",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-070rb",
+    "base_number": "smp/w137-070",
+    "card_no_numeric": "070",
+    "variant": "rb",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_070rb.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_070rc",
+    "name": "smp/w137-070rc",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-070rc",
+    "base_number": "smp/w137-070",
+    "card_no_numeric": "070",
+    "variant": "rc",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_070rc.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_070rd",
+    "name": "smp/w137-070rd",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-070rd",
+    "base_number": "smp/w137-070",
+    "card_no_numeric": "070",
+    "variant": "rd",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_070rd.png",
     "memo": ""
   },
   {
@@ -5895,6 +6915,21 @@
     "memo": ""
   },
   {
+    "id": "smp_w137_074sp",
+    "name": "smp/w137-074sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-074sp",
+    "base_number": "smp/w137-074",
+    "card_no_numeric": "074",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_074sp.png",
+    "memo": ""
+  },
+  {
     "id": "smp_w137_075",
     "name": "smp/w137-075",
     "title_code": "smp",
@@ -5922,6 +6957,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_075s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_075ssp",
+    "name": "smp/w137-075ssp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-075ssp",
+    "base_number": "smp/w137-075",
+    "card_no_numeric": "075",
+    "variant": "ssp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_075ssp.png",
     "memo": ""
   },
   {
@@ -6042,6 +7092,21 @@
     "rarity": "",
     "pack_name": "",
     "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_079s.png",
+    "memo": ""
+  },
+  {
+    "id": "smp_w137_079sp",
+    "name": "smp/w137-079sp",
+    "title_code": "smp",
+    "pack_code": "w137",
+    "number": "smp/w137-079sp",
+    "base_number": "smp/w137-079",
+    "card_no_numeric": "079",
+    "variant": "sp",
+    "is_parallel": true,
+    "rarity": "",
+    "pack_name": "",
+    "image_file": "https://pub-7e685a61ebc04023b22b743856158e68.r2.dev/smp_w137_079sp.png",
     "memo": ""
   },
   {
