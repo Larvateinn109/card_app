@@ -17,24 +17,32 @@
     --blue:#38bdf8;
     --yellow:#f59e0b;
     --gray:#64748b;
+    --header-h: 126px;
   }
 
   *{ box-sizing:border-box; }
 
-  body{
+  html, body{
     margin:0;
     background:var(--bg);
     color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
   }
 
+  body{
+    min-height:100vh;
+  }
+
   header{
     position:sticky;
     top:0;
-    z-index:10;
-    background:rgba(15,23,42,0.96);
-    backdrop-filter: blur(8px);
+    z-index:50;
+    background:rgba(15,23,42,0.97);
+    backdrop-filter: blur(10px);
     border-bottom:1px solid var(--line);
+  }
+
+  .header-inner{
     padding:12px;
   }
 
@@ -44,15 +52,32 @@
     margin-bottom:10px;
   }
 
+  .top-tabs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:10px;
+  }
+
+  .tab-btn{
+    border:none;
+    border-radius:12px;
+    padding:12px;
+    font-weight:800;
+    cursor:pointer;
+    background:var(--panel);
+    color:var(--text);
+    border:1px solid var(--line);
+  }
+
+  .tab-btn.active{
+    background:var(--blue);
+    border-color:transparent;
+  }
+
   .toolbar{
     display:grid;
     grid-template-columns:1fr;
-    gap:10px;
-  }
-
-  .row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
     gap:10px;
   }
 
@@ -78,7 +103,7 @@
 
   .stats{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(6,1fr);
     gap:10px;
     margin-top:10px;
   }
@@ -100,21 +125,37 @@
     color:var(--sub);
     font-size:12px;
     margin-top:4px;
+    line-height:1.35;
   }
 
-  main{
-    padding:12px;
+  .menu-panel{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index:40;
+    transform:translateY(calc(-100% - 12px));
+    transition:transform 0.28s ease;
+    padding:0 12px 12px;
+    pointer-events:none;
   }
 
-  .section{
-    background:var(--panel);
+  .menu-panel.open{
+    transform:translateY(var(--header-h));
+    pointer-events:auto;
+  }
+
+  .menu-card{
+    background:rgba(30,41,59,0.98);
     border:1px solid var(--line);
-    border-radius:14px;
+    border-radius:16px;
     padding:12px;
-    margin-bottom:12px;
+    box-shadow:0 18px 48px rgba(0,0,0,0.4);
+    max-height:calc(100vh - var(--header-h) - 20px);
+    overflow:auto;
   }
 
-  .section-title{
+  .menu-title{
     font-size:18px;
     font-weight:800;
     margin-bottom:10px;
@@ -150,6 +191,17 @@
     color:white;
     cursor:pointer;
     font-weight:700;
+  }
+
+  .hint{
+    color:var(--sub);
+    font-size:12px;
+    margin-top:8px;
+    line-height:1.6;
+  }
+
+  main{
+    padding:12px;
   }
 
   .grid{
@@ -289,22 +341,36 @@
     padding:24px 0;
   }
 
-  .hint{
-    color:var(--sub);
-    font-size:12px;
-    margin-top:8px;
-    line-height:1.6;
+  .backdrop{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.28s ease;
+    z-index:35;
+  }
+
+  .backdrop.show{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  @media (max-width: 1100px){
+    .stats{
+      grid-template-columns:repeat(3,1fr);
+    }
   }
 
   @media (max-width: 900px){
-    .stats{
-      grid-template-columns:repeat(2,1fr);
+    .row3{
+      grid-template-columns:1fr;
     }
   }
 
   @media (max-width: 680px){
-    .row, .row3{
-      grid-template-columns:1fr;
+    .stats{
+      grid-template-columns:repeat(2,1fr);
     }
 
     .title-edit-item{
@@ -318,89 +384,116 @@
 </style>
 </head>
 <body>
-<header>
-  <div class="title">カード管理</div>
+<header id="pageHeader">
+  <div class="header-inner">
+    <div class="title">カード管理</div>
 
-  <div class="toolbar">
-    <input id="searchText" type="text" placeholder="カード番号・タイトル名で検索" />
-
-    <div class="row3">
-      <select id="titleFilter">
-        <option value="">全タイトル</option>
-      </select>
-
-      <select id="ownedFilter">
-        <option value="">所持状況すべて</option>
-        <option value="owned">所持のみ</option>
-        <option value="not-owned">未所持のみ</option>
-      </select>
-
-      <select id="sortMode">
-        <option value="number">番号順</option>
-        <option value="title">タイトル順</option>
-        <option value="count-desc">所持枚数が多い順</option>
-        <option value="owned-first">所持優先</option>
-      </select>
+    <div class="top-tabs">
+      <button id="tabCards" class="tab-btn active">カード一覧</button>
+      <button id="tabMenu" class="tab-btn">管理メニュー</button>
     </div>
-  </div>
 
-  <div class="stats">
-    <div class="stat">
-      <div class="num" id="statVisible">0</div>
-      <div class="label">表示件数</div>
+    <div class="toolbar">
+      <input id="searchText" type="text" placeholder="カード番号・タイトル名で検索" />
+
+      <div class="row3">
+        <select id="titleFilter">
+          <option value="">全タイトル</option>
+        </select>
+
+        <select id="ownedFilter">
+          <option value="">所持状況すべて</option>
+          <option value="owned">所持のみ</option>
+          <option value="not-owned">未所持のみ</option>
+        </select>
+
+        <select id="sortMode">
+          <option value="number">番号順</option>
+          <option value="title">タイトル順</option>
+          <option value="count-desc">所持枚数が多い順</option>
+          <option value="owned-first">所持優先</option>
+        </select>
+      </div>
     </div>
-    <div class="stat">
-      <div class="num" id="statAll">0</div>
-      <div class="label">全カード数</div>
-    </div>
-    <div class="stat">
-      <div class="num" id="statOwnedKinds">0</div>
-      <div class="label">所持種類数</div>
-    </div>
-    <div class="stat">
-      <div class="num" id="statOwnedCount">0</div>
-      <div class="label">所持枚数合計</div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num" id="statVisible">0</div>
+        <div class="label">表示件数</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="statAll">0</div>
+        <div class="label">全カード数</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="statOwnedKinds">0</div>
+        <div class="label">所持種類数<br>（全体）</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="statOwnedCount">0</div>
+        <div class="label">所持枚数合計<br>（全体）</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="statFilteredOwnedCount">0</div>
+        <div class="label">絞り込み中の<br>総枚数</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="statFilteredCompletion">0%</div>
+        <div class="label">絞り込み中の<br>コンプ率</div>
+      </div>
     </div>
   </div>
 </header>
 
-<main>
-  <div class="section">
-    <div class="section-title">タイトル名の管理</div>
+<div id="backdrop" class="backdrop"></div>
+
+<div id="menuPanel" class="menu-panel">
+  <div class="menu-card">
+    <div class="menu-title">管理メニュー</div>
     <div id="titleEditList" class="title-edit-list"></div>
     <div class="hint">
       略称 + パック番号ごとにタイトルをまとめています。<br>
       ここで設定した表示名は、このブラウザに保存されます。
     </div>
   </div>
+</div>
 
-  <div class="section">
-    <div class="section-title">カード一覧</div>
-    <div id="cardGrid" class="grid"></div>
-    <div id="emptyState" class="empty" style="display:none;">条件に合うカードがありません。</div>
-  </div>
+<main>
+  <div id="cardGrid" class="grid"></div>
+  <div id="emptyState" class="empty" style="display:none;">条件に合うカードがありません。</div>
 </main>
 
 <script>
-const STORAGE_OWNED_KEY = "card_manager_owned_counts_v2";
-const STORAGE_TITLE_NAMES_KEY = "card_manager_title_names_v2";
+const STORAGE_OWNED_KEY = "card_manager_owned_counts_v3";
+const STORAGE_TITLE_NAMES_KEY = "card_manager_title_names_v3";
 
 let cards = [];
 let ownedCounts = loadJson(STORAGE_OWNED_KEY, {});
 let customTitleNames = loadJson(STORAGE_TITLE_NAMES_KEY, {});
+let menuOpen = false;
 
 const els = {
+  pageHeader: document.getElementById("pageHeader"),
+  tabCards: document.getElementById("tabCards"),
+  tabMenu: document.getElementById("tabMenu"),
+  menuPanel: document.getElementById("menuPanel"),
+  backdrop: document.getElementById("backdrop"),
+
   searchText: document.getElementById("searchText"),
   titleFilter: document.getElementById("titleFilter"),
   ownedFilter: document.getElementById("ownedFilter"),
   sortMode: document.getElementById("sortMode"),
+
   titleEditList: document.getElementById("titleEditList"),
   cardGrid: document.getElementById("cardGrid"),
   emptyState: document.getElementById("emptyState"),
+
   statVisible: document.getElementById("statVisible"),
   statAll: document.getElementById("statAll"),
   statOwnedKinds: document.getElementById("statOwnedKinds"),
   statOwnedCount: document.getElementById("statOwnedCount"),
+  statFilteredOwnedCount: document.getElementById("statFilteredOwnedCount"),
+  statFilteredCompletion: document.getElementById("statFilteredCompletion"),
 };
 
 function loadJson(key, fallback){
@@ -417,6 +510,19 @@ function saveOwnedCounts(){
 
 function saveTitleNames(){
   localStorage.setItem(STORAGE_TITLE_NAMES_KEY, JSON.stringify(customTitleNames));
+}
+
+function updateHeaderHeightVar(){
+  const h = els.pageHeader.offsetHeight;
+  document.documentElement.style.setProperty("--header-h", h + "px");
+}
+
+function setMenuOpen(open){
+  menuOpen = open;
+  els.menuPanel.classList.toggle("open", open);
+  els.backdrop.classList.toggle("show", open);
+  els.tabMenu.classList.toggle("active", open);
+  els.tabCards.classList.toggle("active", !open);
 }
 
 function getTitleKey(card){
@@ -534,10 +640,17 @@ function renderStats(filteredCards){
   const ownedKinds = cards.filter(card => getOwnedCount(card.id) > 0).length;
   const ownedTotal = cards.reduce((sum, card) => sum + getOwnedCount(card.id), 0);
 
-  els.statVisible.textContent = filteredCards.length;
+  const filteredKinds = filteredCards.length;
+  const filteredOwnedKinds = filteredCards.filter(card => getOwnedCount(card.id) > 0).length;
+  const filteredOwnedTotal = filteredCards.reduce((sum, card) => sum + getOwnedCount(card.id), 0);
+  const filteredCompletion = filteredKinds === 0 ? 0 : Math.round((filteredOwnedKinds / filteredKinds) * 1000) / 10;
+
+  els.statVisible.textContent = filteredKinds;
   els.statAll.textContent = allCount;
   els.statOwnedKinds.textContent = ownedKinds;
   els.statOwnedCount.textContent = ownedTotal;
+  els.statFilteredOwnedCount.textContent = filteredOwnedTotal;
+  els.statFilteredCompletion.textContent = filteredCompletion + "%";
 }
 
 function renderTitleFilter(){
@@ -695,6 +808,7 @@ function renderAll(){
   renderTitleFilter();
   renderTitleEditor();
   renderCards();
+  updateHeaderHeightVar();
 }
 
 async function loadCards(){
@@ -706,10 +820,16 @@ async function loadCards(){
   renderAll();
 }
 
+els.tabCards.addEventListener("click", () => setMenuOpen(false));
+els.tabMenu.addEventListener("click", () => setMenuOpen(!menuOpen));
+els.backdrop.addEventListener("click", () => setMenuOpen(false));
+
 els.searchText.addEventListener("input", renderCards);
 els.titleFilter.addEventListener("change", renderCards);
 els.ownedFilter.addEventListener("change", renderCards);
 els.sortMode.addEventListener("change", renderCards);
+
+window.addEventListener("resize", updateHeaderHeightVar);
 
 loadCards().catch(err => {
   els.cardGrid.innerHTML = "";
